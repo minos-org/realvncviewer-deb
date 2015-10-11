@@ -1,0 +1,30 @@
+Source: realvncviewer
+Section: net
+Priority: optional
+Maintainer: Javier P.L. <chilicuil@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.5), libx11-6, libxau6, libxcb1, libxdmcp6, libxext6
+Standards-Version: 3.9.4
+
+Package: realvncviewer506
+Architecture: any
+Provides: vnc-viewer
+Depends: ${shlibs:Depends}, ${misc:Depends}
+#let's asume ppl wont try to use realvncviewer on uncommon envs and let's save them some dependences
+#Depends: ${shlibs:Depends}, ${misc:Depends}, libx11-6, libxau6, libxcb1, libxdmcp6, libxext6
+Description:  Client application for the Virtual Network Computing (VNC) protocol.
+ Client application for the Virtual Network Computing (VNC) protocol to control
+ another computer's screen remotely. This repository contain freeze versions for
+ [minos](http://minos.io), refer to [realvnc](http://www.realvnc.com/) for the
+ latest one.
+
+Package: realvncviewer507
+Architecture: any
+Provides: vnc-viewer
+Depends: ${shlibs:Depends}, ${misc:Depends}
+#let's asume ppl wont try to use realvncviewer on uncommon envs and let's save them some dependences
+#Depends: ${shlibs:Depends}, ${misc:Depends}, libx11-6, libxau6, libxcb1, libxdmcp6, libxext6
+Description:  Client application for the Virtual Network Computing (VNC) protocol.
+ Client application for the Virtual Network Computing (VNC) protocol to control
+ another computer's screen remotely. This repository contain freeze versions for
+ [minos](http://minos.io), refer to [realvnc](http://www.realvnc.com/) for the
+ latest one.

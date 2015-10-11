@@ -1,0 +1,5 @@
+?package(realvncviewer507):needs="X11" \
+	section="Apps/Net" \
+	title="Realvnc Viewer" \
+        command="realvncviewer" \
+        hints="Realvnc Viewer"

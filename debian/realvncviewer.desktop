@@ -1,0 +1,12 @@
+[Desktop Entry]
+Hidden=false
+Exec=realvncviewer %u
+Type=Application
+NoDisplay=false
+Version=1.0
+StartupNotify=true
+StartupWMClass=realvncviewer
+GenericName[en_US]=vnc viewer
+Categories=Application;Internet;Network;
+Terminal=false
+Name=Realvnc viewer

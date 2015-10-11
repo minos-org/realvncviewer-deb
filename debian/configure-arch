@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+_arch()
+{   #check for system arch, returns [64|32]
+    if [ -z "${MACHTYPE}" ]; then
+        _arch_var_arch="$(uname -m)"
+    else
+        _arch_var_arch="$(printf "%s" "${MACHTYPE}" | cut -d- -f1)"
+    fi
+
+    case "${_arch_var_arch}" in
+        x86_64) _arch_var_arch="64" ;;
+        i686)   _arch_var_arch="32" ;;
+        *)      return 1 ;;
+    esac
+
+    printf "%s" "${_arch_var_arch}"
+}
+
+for dir in realvncviewer*; do
+    if [ -f "${dir}/realvncviewer$(_arch).tar.gz" ]; then
+        (cd "${dir}" && tar zxf realvncviewer$(_arch).tar.gz && mv "realvncviewer$(_arch).bin" realvncviewer)
+    fi
+done
+
+# vim: set ts=8 sw=4 tw=0 ft=sh :

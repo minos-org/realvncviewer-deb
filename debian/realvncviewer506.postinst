@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure)
+        update-alternatives --install /usr/bin/vncviewer vncviewer /usr/bin/realvncviewer 200
+        ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+        # Nothing to do because we didn't take any action in the prerm
+        ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+        ;;
+esac

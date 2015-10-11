@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+update-alternatives --remove vncviewer /usr/bin/realvncviewer || true
+
+exit 0
